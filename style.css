@@ -1,0 +1,139 @@
+/* roots */
+:root {
+    --main-clr: orange;
+    --main-bg-clr:rgb(252, 249, 249);
+    
+}
+
+/* reusable code */
+.btn {
+    margin-top: 1.2rem;
+    border: 1px solid var(--main-clr);
+}
+.btn:hover{
+    color: #fff;
+    background-color: var(--main-clr);
+}
+
+/* Navbar */
+.logo-name{
+    color: #fff;
+    user-select: none;
+}
+.logo-name span{
+    color: var(--main-clr);
+}
+#nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#nav ul li a {
+    position: relative;
+    color: var(--main-clr);
+}
+
+#nav ul li a::before {
+    left: 0;
+    bottom: 0;
+    content: " ";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    transform: scaleX(0);
+    transition: 0.5s;
+    background-color: var(--main-clr);
+}
+
+#nav ul li a:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* hero Section */
+
+
+
+.imgbox img {
+    width: 17rem;
+    height: 17rem;
+    border-radius: 50rem;
+    border: 5px solid var(--main-clr);
+}
+
+
+#img-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero-text p {
+    margin: 0;
+}
+
+#hero-text h1 {
+    margin-top: -5px;
+    margin-bottom: 20px;
+}
+
+#hero-text span {
+    color: var(--main-clr);
+}
+
+.paragraph {
+    text-transform: capitalize;
+}
+
+/* about section */
+#about-section {
+    background-color: var(--main-bg-clr);
+}
+
+.about-imgbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-img {
+    box-shadow: 3px 3px 5px var(--main-clr);
+}
+
+/* Services section */
+.card-hover:hover {
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    color: var(--main-clr);
+}
+
+/* Contetct section */
+#contact-section {
+    background-color: var(--main-bg-clr);
+}
+
+#contact-section h1 i {
+    margin: 0 20px;
+}
+#icon-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+
+/* Media Queries */
+@media only screen and (max-width:1150px) {
+    #contact-section h1 i {
+        margin: 0 10px;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    #contact-section h1 i {
+        margin: 0 5px;
+    }
+}
